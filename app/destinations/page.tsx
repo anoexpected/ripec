@@ -118,8 +118,8 @@ export default function Destinations() {
                                 key={key}
                                 onClick={() => setActiveTab(key)}
                                 className={`px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 whitespace-nowrap ${activeTab === key
-                                        ? "bg-orange-500 text-white shadow-lg"
-                                        : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                                    ? "bg-orange-500 text-white shadow-lg"
+                                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                                     }`}
                             >
                                 {countries[key as keyof typeof countries].name}
@@ -133,22 +133,23 @@ export default function Destinations() {
             <div>
                 {/* Hero Image */}
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-                    <div className="relative h-[400px] w-full rounded-2xl overflow-hidden">
+                    <div className="relative min-h-[60vh] h-[500px] w-full rounded-3xl overflow-hidden">
                         <Image
                             src={activeCountry.image}
                             alt={activeCountry.name}
                             fill
-                            className="object-cover"
+                            className="object-cover w-full h-full"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
-                        <div className="absolute bottom-8 left-8 text-white">
-                            <div className="inline-block bg-green-500 text-white px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+                        <div className="absolute bottom-0 left-0 p-8 md:p-12 text-white">
+                            <div className="inline-flex items-center gap-2 backdrop-blur-md bg-white/10 border border-white/20 text-white px-4 py-1.5 rounded-full text-sm font-medium uppercase tracking-widest mb-6">
+                                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
                                 Open for Applications
                             </div>
-                            <h2 className="text-5xl md:text-6xl font-bold mb-2 drop-shadow-lg">
+                            <h2 className="text-7xl md:text-9xl font-black tracking-tighter mb-3 drop-shadow-2xl">
                                 {activeCountry.name}
                             </h2>
-                            <p className="text-2xl text-orange-400 font-semibold">
+                            <p className="text-xl md:text-2xl text-gray-200 font-light tracking-wide drop-shadow-2xl">
                                 {activeCountry.tagline}
                             </p>
                         </div>

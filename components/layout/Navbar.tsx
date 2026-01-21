@@ -4,11 +4,12 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 
 export default function Navbar() {
     const pathname = usePathname();
     const [isScrolled, setIsScrolled] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -19,100 +20,122 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    const navLinks = [
+        { href: "/", label: "Home" },
+        { href: "/services", label: "Services" },
+        { href: "/destinations", label: "Study Destinations" },
+        { href: "/contact", label: "Contact" },
+    ];
+
     return (
-        <nav
-            className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled
-                    ? "bg-white/90 backdrop-blur-md shadow-md py-3"
-                    : "bg-transparent py-6"
-                }`}
-        >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between">
-                    <Link href="/" className="flex items-center justify-start">
-                        <div className="bg-white/90 backdrop-blur-sm shadow-sm px-4 py-2 rounded-lg">
-                            <Image
-                                src="/logo.png"
-                                alt="RIPEC Logo"
-                                width={180}
-                                height={60}
-                                priority
-                            />
+        <>
+            <nav
+                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+                        ? "bg-white/90 backdrop-blur-md border-b border-white/20 py-3"
+                        : "bg-transparent py-6"
+                    }`}
+            >
+                <div className="max-w-7xl mx-auto px-6">
+                    <div className="flex items-center justify-between">
+                        {/* Brand Badge */}
+                        <Link href="/" className="flex items-center">
+                            <div className="bg-white rounded-xl shadow-sm px-4 py-2 flex items-center justify-center">
+                                <Image
+                                    src="/logo.png"
+                                    alt="RIPEC Logo"
+                                    width={160}
+                                    height={50}
+                                    className="h-10 w-auto object-contain"
+                                    priority
+                                />
+                            </div>
+                        </Link>
+
+                        {/* Desktop Navigation */}
+                        <div className="hidden md:flex items-center space-x-8">
+                            {navLinks.map((link) => (
+                                <Link
+                                    key={link.href}
+                                    href={link.href}
+                                    className={`text-sm font-semibold tracking-wide transition-all duration-300 ${pathname === link.href
+                                            ? isScrolled
+                                                ? "text-orange-500"
+                                                : "text-white drop-shadow-md"
+                                            : isScrolled
+                                                ? "text-slate-800 hover:text-orange-500"
+                                                : "text-white/90 hover:text-white drop-shadow-sm"
+                                        }`}
+                                >
+                                    {link.label}
+                                </Link>
+                            ))}
                         </div>
-                    </Link>
 
-                    <div className="hidden md:flex items-center space-x-8">
-                        <Link
-                            href="/"
-                            className={`transition-colors ${pathname === "/"
-                                    ? isScrolled
-                                        ? "text-ripec-primary font-semibold"
-                                        : "text-white font-semibold"
-                                    : isScrolled
-                                        ? "text-gray-700 hover:text-ripec-primary"
-                                        : "text-white/90 hover:text-white"
-                                }`}
-                        >
-                            Home
-                        </Link>
-                        <Link
-                            href="/services"
-                            className={`transition-colors ${pathname === "/services"
-                                    ? isScrolled
-                                        ? "text-ripec-primary font-semibold"
-                                        : "text-white font-semibold"
-                                    : isScrolled
-                                        ? "text-gray-700 hover:text-ripec-primary"
-                                        : "text-white/90 hover:text-white"
-                                }`}
-                        >
-                            Services
-                        </Link>
-                        <Link
-                            href="/destinations"
-                            className={`transition-colors ${pathname === "/destinations"
-                                    ? isScrolled
-                                        ? "text-ripec-primary font-semibold"
-                                        : "text-white font-semibold"
-                                    : isScrolled
-                                        ? "text-gray-700 hover:text-ripec-primary"
-                                        : "text-white/90 hover:text-white"
-                                }`}
-                        >
-                            Study Destinations
-                        </Link>
-                        <Link
-                            href="/contact"
-                            className={`transition-colors ${pathname === "/contact"
-                                    ? isScrolled
-                                        ? "text-ripec-primary font-semibold"
-                                        : "text-white font-semibold"
-                                    : isScrolled
-                                        ? "text-gray-700 hover:text-ripec-primary"
-                                        : "text-white/90 hover:text-white"
-                                }`}
-                        >
-                            Contact
-                        </Link>
-                    </div>
-
-                    <div className="flex items-center space-x-4">
-                        <a
-                            href="https://wa.me/263772644806"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-ripec-gold text-black font-semibold px-5 py-2 rounded-lg hover:opacity-90 transition-opacity"
-                        >
-                            WhatsApp Us
-                        </a>
-                        <button
-                            className={`md:hidden transition-colors ${isScrolled ? "text-ripec-navy" : "text-white"
-                                }`}
-                        >
-                            <Menu size={24} />
-                        </button>
+                        {/* Action Button & Mobile Menu Toggle */}
+                        <div className="flex items-center gap-4">
+                            <a
+                                href="https://wa.me/263772644806"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="hidden sm:flex items-center gap-2 bg-orange-500 text-white rounded-full px-6 py-2.5 font-bold shadow-lg shadow-orange-500/30 transition-transform hover:-translate-y-0.5"
+                            >
+                                <MessageCircle className="w-4 h-4" />
+                                WhatsApp
+                            </a>
+                            <button
+                                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                                className={`md:hidden transition-colors ${isScrolled ? "text-slate-800" : "text-white"
+                                    }`}
+                                aria-label="Toggle menu"
+                            >
+                                {isMobileMenuOpen ? (
+                                    <X size={24} />
+                                ) : (
+                                    <Menu size={24} />
+                                )}
+                            </button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+
+            {/* Mobile Menu */}
+            {isMobileMenuOpen && (
+                <div className="fixed inset-0 z-40 md:hidden">
+                    <div
+                        className="fixed inset-0 bg-black/50 backdrop-blur-sm"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                    />
+                    <div className="fixed top-0 right-0 bottom-0 w-64 bg-white shadow-2xl">
+                        <div className="flex flex-col h-full pt-24 px-6">
+                            {navLinks.map((link) => (
+                                <Link
+                                    key={link.href}
+                                    href={link.href}
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className={`py-4 text-lg font-semibold border-b border-gray-100 transition-colors ${pathname === link.href
+                                            ? "text-orange-500"
+                                            : "text-slate-800 hover:text-orange-500"
+                                        }`}
+                                >
+                                    {link.label}
+                                </Link>
+                            ))}
+                            <div className="mt-8">
+                                <a
+                                    href="https://wa.me/263772644806"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center justify-center gap-2 bg-orange-500 text-white rounded-full px-6 py-3 font-bold shadow-lg shadow-orange-500/30"
+                                >
+                                    <MessageCircle className="w-4 h-4" />
+                                    WhatsApp Us
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+        </>
     );
 }
