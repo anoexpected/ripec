@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, ArrowRight, Building2 } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
@@ -111,15 +111,15 @@ export default function Destinations() {
                 </div>
 
                 {/* Country Switcher Tabs */}
-                <div className="flex justify-center mb-12">
-                    <div className="flex flex-wrap gap-4">
+                <div className="flex justify-center mb-12 overflow-x-auto scrollbar-hide">
+                    <div className="flex gap-4 px-4">
                         {Object.keys(countries).map((key) => (
                             <button
                                 key={key}
                                 onClick={() => setActiveTab(key)}
-                                className={`px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 ${activeTab === key
-                                    ? "bg-orange-500 text-white"
-                                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                                className={`px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 whitespace-nowrap ${activeTab === key
+                                        ? "bg-orange-500 text-white shadow-lg"
+                                        : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                                     }`}
                             >
                                 {countries[key as keyof typeof countries].name}
@@ -140,12 +140,15 @@ export default function Destinations() {
                             fill
                             className="object-cover"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
                         <div className="absolute bottom-8 left-8 text-white">
-                            <h2 className="text-5xl font-bold mb-2">
+                            <div className="inline-block bg-green-500 text-white px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
+                                Open for Applications
+                            </div>
+                            <h2 className="text-5xl md:text-6xl font-bold mb-2 drop-shadow-lg">
                                 {activeCountry.name}
                             </h2>
-                            <p className="text-2xl text-orange-400">
+                            <p className="text-2xl text-orange-400 font-semibold">
                                 {activeCountry.tagline}
                             </p>
                         </div>
@@ -154,20 +157,20 @@ export default function Destinations() {
 
                 {/* Why Study Here Section */}
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                        {/* Left: Key Benefits */}
-                        <div>
-                            <h3 className="text-3xl font-bold text-gray-900 mb-8">
-                                Key Benefits
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                        {/* Left: Key Benefits Card */}
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                                At a Glance
                             </h3>
-                            <div className="space-y-4">
+                            <div className="space-y-5">
                                 {activeCountry.benefits.map((benefit, index) => (
                                     <div
                                         key={index}
-                                        className="flex items-start gap-3"
+                                        className="flex items-start gap-4"
                                     >
-                                        <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
-                                        <span className="text-lg text-gray-700">
+                                        <CheckCircle className="w-7 h-7 text-green-500 flex-shrink-0 mt-0.5" />
+                                        <span className="text-lg text-gray-700 font-medium">
                                             {benefit}
                                         </span>
                                     </div>
@@ -175,14 +178,23 @@ export default function Destinations() {
                             </div>
                         </div>
 
-                        {/* Right: Description */}
-                        <div>
-                            <h3 className="text-3xl font-bold text-gray-900 mb-6">
+                        {/* Right: Description Card with CTA */}
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                            <h3 className="text-2xl font-bold text-gray-900 mb-6">
                                 Why Study Here?
                             </h3>
-                            <p className="text-lg text-gray-600 leading-relaxed">
+                            <p className="text-lg text-gray-600 leading-relaxed mb-8">
                                 {activeCountry.description}
                             </p>
+                            <a
+                                href={`https://wa.me/263772644806?text=I'd like to enquire about studying in ${activeCountry.name}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors duration-300 shadow-md hover:shadow-lg"
+                            >
+                                Enquire about {activeCountry.name}
+                                <ArrowRight className="w-5 h-5" />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -199,7 +211,7 @@ export default function Destinations() {
                                 {activeCountry.partners.map((partner, index) => (
                                     <div
                                         key={index}
-                                        className="bg-white border border-gray-200 rounded-xl p-6 flex items-center justify-center hover:shadow-lg transition-shadow duration-300"
+                                        className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center min-h-[120px]"
                                     >
                                         {partner.logo ? (
                                             <Image
@@ -210,7 +222,7 @@ export default function Destinations() {
                                                 className="h-16 w-auto object-contain"
                                             />
                                         ) : (
-                                            <span className="text-center text-gray-800 font-semibold text-lg">
+                                            <span className="text-center text-gray-800 font-semibold text-base">
                                                 {partner.name}
                                             </span>
                                         )}
@@ -219,10 +231,13 @@ export default function Destinations() {
                             </div>
                         ) : (
                             <div className="max-w-2xl mx-auto text-center">
-                                <div className="bg-orange-50 border-2 border-orange-200 rounded-2xl p-8">
-                                    <p className="text-lg text-gray-700 font-medium">
-                                        We partner with top Government & Private
-                                        Universities in {activeCountry.name}.
+                                <div className="bg-white border-2 border-orange-200 rounded-2xl p-10 shadow-sm">
+                                    <Building2 className="w-12 h-12 text-orange-500 mx-auto mb-4" />
+                                    <p className="text-lg text-gray-800 font-semibold mb-2">
+                                        Government & Private Universities
+                                    </p>
+                                    <p className="text-gray-600">
+                                        We partner with top-ranked institutions in {activeCountry.name}.
                                     </p>
                                 </div>
                             </div>
