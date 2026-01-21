@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { CheckCircle, ArrowRight, Building2 } from "lucide-react";
 import { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 
 const countries = {
     india: {
@@ -86,6 +86,7 @@ const countries = {
 
 export default function Destinations() {
     const searchParams = useSearchParams();
+    const router = useRouter();
     const countryParam = searchParams.get("country");
     const [activeTab, setActiveTab] = useState(countryParam || "india");
 
@@ -187,15 +188,13 @@ export default function Destinations() {
                             <p className="text-lg text-gray-600 leading-relaxed mb-8">
                                 {activeCountry.description}
                             </p>
-                            <a
-                                href={`https://wa.me/263772644806?text=I'd like to enquire about studying in ${activeCountry.name}`}
-                                target="_blank"
-                                rel="noopener noreferrer"
+                            <button
+                                onClick={() => router.push(`/contact?destination=${encodeURIComponent(activeCountry.name)}`)}
                                 className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors duration-300 shadow-md hover:shadow-lg"
                             >
                                 Enquire about {activeCountry.name}
                                 <ArrowRight className="w-5 h-5" />
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>

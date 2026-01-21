@@ -1,9 +1,14 @@
 "use client";
 
 import { MapPin, Phone, Mail, Shield } from "lucide-react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 
 export default function Contact() {
+    const searchParams = useSearchParams();
+    const destinationParam = searchParams.get("destination");
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
     const [formData, setFormData] = useState({
         name: "",
         phone: "",
@@ -12,10 +17,43 @@ export default function Contact() {
         message: "",
     });
 
+    // Auto-fill destination from URL parameter
+    useEffect(() => {
+        if (destinationParam) {
+            setFormData(prev => ({ ...prev, destination: destinationParam }));
+        }
+    }, [destinationParam]);
+
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        const whatsappMessage = `Hello RIPEC,%0A%0AName: ${formData.name}%0APhone: ${formData.phone}%0ADestination: ${formData.destination}%0AService Needed: ${formData.service}%0A%0AMessage:%0A${formData.message}`;
-        window.open(`https://wa.me/263772644806?text=${whatsappMessage}`, "_blank");
+
+        // Validation
+        if (!formData.name || !formData.phone) {
+            alert("Please fill in your name and phone number");
+            return;
+        }
+
+        setIsSubmitting(true);
+
+        // Format WhatsApp message with proper structure
+        const message = `*New Consultation Request*\n\n` +
+            `*Name:* ${formData.name}\n` +
+            `*Phone:* ${formData.phone}\n` +
+            `*Destination:* ${formData.destination || "Not specified"}\n` +
+            `*Service:* ${formData.service || "Not specified"}\n` +
+            `*Message:* ${formData.message || "No additional message"}`;
+
+        const whatsappUrl = `https://wa.me/263772644806?text=${encodeURIComponent(message)}`;
+
+        // Open WhatsApp
+        window.open(whatsappUrl, "_blank");
+
+        // Reset form and loading state after a short delay
+        setTimeout(() => {
+            setIsSubmitting(false);
+            // Optionally reset form
+            // setFormData({ name: "", phone: "", destination: "", service: "", message: "" });
+        }, 1500);
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -198,9 +236,10 @@ export default function Contact() {
                                 {/* Submit Button */}
                                 <button
                                     type="submit"
-                                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:to-orange-500 text-white font-bold text-lg py-5 rounded-xl shadow-xl shadow-orange-500/20 transform hover:-translate-y-1 transition-all duration-300"
+                                    disabled={isSubmitting}
+                                    className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:to-orange-500 text-white font-bold text-lg py-5 rounded-xl shadow-xl shadow-orange-500/20 transform hover:-translate-y-1 transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none"
                                 >
-                                    Request Free Consultation
+                                    {isSubmitting ? "Redirecting to WhatsApp..." : "Request Free Consultation"}
                                 </button>
 
                                 <p className="text-center text-sm text-gray-500 mt-4">

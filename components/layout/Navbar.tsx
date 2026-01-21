@@ -62,8 +62,8 @@ export default function Navbar() {
                                     href={link.href}
                                     className={`text-sm font-semibold tracking-wide transition-all duration-300 ${pathname === link.href
                                         ? isScrolled || !hasDarkHero
-                                            ? "text-orange-500"
-                                            : "text-white drop-shadow-md"
+                                            ? "text-orange-500 font-bold"
+                                            : "text-white font-bold drop-shadow-md"
                                         : isScrolled || !hasDarkHero
                                             ? "text-slate-800 hover:text-orange-500"
                                             : "text-white/90 hover:text-white drop-shadow-sm"
@@ -117,8 +117,8 @@ export default function Navbar() {
                                     href={link.href}
                                     onClick={() => setIsMobileMenuOpen(false)}
                                     className={`py-4 text-lg font-semibold border-b border-gray-100 transition-colors ${pathname === link.href
-                                            ? "text-orange-500 font-bold"
-                                            : "text-slate-800 hover:text-orange-500"
+                                        ? "text-orange-500 font-bold"
+                                        : "text-slate-800 hover:text-orange-500"
                                         }`}
                                 >
                                     {link.label}
