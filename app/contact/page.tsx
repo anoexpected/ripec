@@ -30,7 +30,7 @@ export default function Contact() {
                     {/* Decorative blur circles */}
                     <div className="absolute top-10 -left-20 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl"></div>
                     <div className="absolute bottom-10 -right-20 w-80 h-80 bg-orange-500/5 rounded-full blur-3xl"></div>
-                    
+
                     <div className="max-w-lg mx-auto relative z-10 w-full">
                         <h1 className="text-5xl md:text-6xl text-white font-bold tracking-tight mb-4">
                             Let's Build Your Future.
