@@ -1,6 +1,6 @@
 "use client";
 
-import { MapPin, Phone, Mail, Shield } from "lucide-react";
+import { MapPin, Phone, Mail, Shield, Users } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
@@ -115,6 +115,22 @@ export default function Contact() {
                                     <p className="text-slate-400 text-xs">info@ripec.com</p>
                                 </div>
                             </div>
+
+                            {/* WhatsApp Channel Card */}
+                            <a
+                                href="https://whatsapp.com/channel/0029Vb5jYdb2ER6qUPwqRa15"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="bg-green-500/10 backdrop-blur-sm border border-green-500/20 p-4 rounded-xl flex items-center gap-4 hover:bg-green-500/20 transition-all duration-300 cursor-pointer group"
+                            >
+                                <div className="flex-shrink-0 w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center group-hover:bg-green-500/30 transition-colors">
+                                    <Users className="w-6 h-6 text-green-400" />
+                                </div>
+                                <div>
+                                    <h3 className="text-white font-semibold text-sm mb-1">Join our WhatsApp Channel</h3>
+                                    <p className="text-slate-400 text-xs">Get scholarship updates & news daily</p>
+                                </div>
+                            </a>
                         </div>
 
                         {/* Trust Badge */}
