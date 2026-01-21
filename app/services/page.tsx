@@ -1,6 +1,7 @@
 "use client";
 
 import { Compass, Award, Plane, Home, Shield, Sparkles, Users, ArrowRight } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const services = [
     {
@@ -52,6 +53,8 @@ const benefits = [
 ];
 
 export default function Services() {
+    const router = useRouter();
+
     return (
         <main className="bg-white min-h-screen pt-28">
             {/* Hero Section */}
@@ -169,15 +172,13 @@ export default function Services() {
                     <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
                         Book a free consultation with our education counselors and begin your journey today.
                     </p>
-                    <a
-                        href="https://wa.me/263772644806?text=I'd like to book a free consultation"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                    <button
+                        onClick={() => router.push('/contact?service=General%20Consultation')}
                         className="inline-flex items-center gap-3 bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
                     >
                         Book Free Consultation
                         <ArrowRight className="w-5 h-5" />
-                    </a>
+                    </button>
                 </div>
             </section>
         </main>

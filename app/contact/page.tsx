@@ -7,6 +7,7 @@ import { useSearchParams } from "next/navigation";
 export default function Contact() {
     const searchParams = useSearchParams();
     const destinationParam = searchParams.get("destination");
+    const serviceParam = searchParams.get("service");
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     const [formData, setFormData] = useState({
@@ -17,12 +18,15 @@ export default function Contact() {
         message: "",
     });
 
-    // Auto-fill destination from URL parameter
+    // Auto-fill destination and service from URL parameters
     useEffect(() => {
         if (destinationParam) {
             setFormData(prev => ({ ...prev, destination: destinationParam }));
         }
-    }, [destinationParam]);
+        if (serviceParam) {
+            setFormData(prev => ({ ...prev, service: serviceParam }));
+        }
+    }, [destinationParam, serviceParam]);
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
