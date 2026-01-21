@@ -16,6 +16,10 @@ const partners = [
         name: "RNTU Rabindranath Tagore",
         logo: "/partners/rntu-rabindranath-tagore.png",
     },
+    {
+        name: "Eduville Malaysia",
+        logo: "/partners/Eduville Malaysia.png",
+    },
 ];
 
 export default function PartnersMarquee() {
@@ -37,9 +41,11 @@ export default function PartnersMarquee() {
                         {partners.map((partner, index) => (
                             <div
                                 key={`partner-1-${index}`}
-                                className={`flex-shrink-0 group ${partner.name === "Global Arcus"
-                                    ? "bg-gray-50 rounded-lg p-4"
-                                    : ""
+                                className={`flex-shrink-0 group ${partner.name === "Global Arcus" ||
+                                        partner.name === "Britts Imperial" ||
+                                        partner.name === "Chandigarh University"
+                                        ? "bg-gray-50 rounded-lg p-4"
+                                        : ""
                                     }`}
                             >
                                 <Image
@@ -47,9 +53,11 @@ export default function PartnersMarquee() {
                                     alt={partner.name}
                                     width={160}
                                     height={64}
-                                    className={`h-16 w-auto object-contain transition-all duration-300 ${partner.name === "Global Arcus"
-                                        ? "grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100"
-                                        : "brightness-0 opacity-60 group-hover:brightness-100 group-hover:opacity-100"
+                                    className={`h-16 w-auto object-contain transition-all duration-300 ${partner.name === "Global Arcus" ||
+                                            partner.name === "Britts Imperial" ||
+                                            partner.name === "Chandigarh University"
+                                            ? "grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100"
+                                            : "brightness-0 opacity-60 group-hover:brightness-100 group-hover:opacity-100"
                                         }`}
                                 />
                             </div>
@@ -58,9 +66,11 @@ export default function PartnersMarquee() {
                         {partners.map((partner, index) => (
                             <div
                                 key={`partner-2-${index}`}
-                                className={`flex-shrink-0 group ${partner.name === "Global Arcus"
-                                    ? "bg-gray-50 rounded-lg p-4"
-                                    : ""
+                                className={`flex-shrink-0 group ${partner.name === "Global Arcus" ||
+                                        partner.name === "Britts Imperial" ||
+                                        partner.name === "Chandigarh University"
+                                        ? "bg-gray-50 rounded-lg p-4"
+                                        : ""
                                     }`}
                             >
                                 <Image
@@ -68,9 +78,11 @@ export default function PartnersMarquee() {
                                     alt={partner.name}
                                     width={160}
                                     height={64}
-                                    className={`h-16 w-auto object-contain transition-all duration-300 ${partner.name === "Global Arcus"
-                                        ? "grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100"
-                                        : "brightness-0 opacity-60 group-hover:brightness-100 group-hover:opacity-100"
+                                    className={`h-16 w-auto object-contain transition-all duration-300 ${partner.name === "Global Arcus" ||
+                                            partner.name === "Britts Imperial" ||
+                                            partner.name === "Chandigarh University"
+                                            ? "grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100"
+                                            : "brightness-0 opacity-60 group-hover:brightness-100 group-hover:opacity-100"
                                         }`}
                                 />
                             </div>

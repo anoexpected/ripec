@@ -1,27 +1,32 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const destinations = [
     {
         name: "India",
+        slug: "india",
         image: "/countries/india.jpg",
         description:
             "Home to world-class technical institutes. We secure 50–100% tuition waivers for eligible students.",
     },
     {
         name: "China",
+        slug: "china",
         image: "/countries/china.jpg",
         description:
             "Globally ranked universities with generous government scholarships and cutting-edge research facilities.",
     },
     {
         name: "Malaysia",
+        slug: "malaysia",
         image: "/countries/Malaysia.jpg",
         description:
             "A hub for international education offering affordable tuition and dual-degree programs with UK/US universities.",
     },
     {
         name: "United Arab Emirates",
+        slug: "uae",
         image: "/countries/United Arab Emirates.jpg",
         description:
             "Experience modern education in a global business hub with excellent career prospects after graduation.",
@@ -44,8 +49,9 @@ export default function Destinations() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {destinations.map((destination) => (
-                        <div
+                        <Link
                             key={destination.name}
+                            href={`/destinations?country=${destination.slug}`}
                             className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
                         >
                             <div className="relative h-56 overflow-hidden">
@@ -71,7 +77,7 @@ export default function Destinations() {
                                     />
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </div>
