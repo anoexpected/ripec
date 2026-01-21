@@ -26,7 +26,7 @@ export default function Contact() {
         <main className="bg-white min-h-screen pt-28">
             <div className="grid lg:grid-cols-[40%,60%] min-h-[calc(100vh-7rem)]">
                 {/* Left Column - Dark Section */}
-                <div className="bg-slate-900 p-8 lg:p-20 flex items-center relative overflow-hidden">
+                <div className="bg-slate-950 p-8 lg:p-20 flex items-center relative overflow-hidden">
                     {/* Decorative blur circles */}
                     <div className="absolute top-10 -left-20 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl"></div>
                     <div className="absolute bottom-10 -right-20 w-80 h-80 bg-orange-500/5 rounded-full blur-3xl"></div>
@@ -92,7 +92,7 @@ export default function Contact() {
 
                 {/* Right Column - Light Section with Form */}
                 <div className="bg-gray-50 p-8 lg:p-16 flex items-center justify-center">
-                    <div className="w-full max-w-2xl">
+                    <div className="w-full max-w-2xl mb-24 lg:mb-0">
                         <div className="bg-white rounded-3xl shadow-2xl shadow-slate-200/50 p-12">
                             <h2 className="text-3xl font-bold text-gray-900 mb-3">
                                 Request Free Consultation
