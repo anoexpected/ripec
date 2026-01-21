@@ -116,11 +116,10 @@ export default function Navbar() {
                                     key={link.href}
                                     href={link.href}
                                     onClick={() => setIsMobileMenuOpen(false)}
-                                    className={`py-4 text-lg font-semibold border-b border-gray-100 transition-colors ${
-                                        pathname === link.href
+                                    className={`py-4 text-lg font-semibold border-b border-gray-100 transition-colors ${pathname === link.href
                                             ? "text-orange-500 font-bold"
                                             : "text-slate-800 hover:text-orange-500"
-                                    }`}
+                                        }`}
                                 >
                                     {link.label}
                                 </Link>
