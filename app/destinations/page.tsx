@@ -98,10 +98,10 @@ export default function Destinations() {
     const activeCountry = countries[activeTab as keyof typeof countries];
 
     return (
-        <main className="bg-white min-h-screen pt-20">
+        <main className="bg-white min-h-screen pt-28">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Page Header */}
-                <div className="text-center py-12">
+                <div className="text-center py-8">
                     <h1 className="text-4xl font-bold text-gray-900 mb-4">
                         Explore Top Study Destinations
                     </h1>

@@ -11,6 +11,9 @@ export default function Navbar() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+    // Pages with dark hero backgrounds where white text is needed
+    const hasDarkHero = pathname === "/";
+
     useEffect(() => {
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 50);
@@ -31,21 +34,21 @@ export default function Navbar() {
         <>
             <nav
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                        ? "bg-white/90 backdrop-blur-md border-b border-white/20 py-3"
-                        : "bg-transparent py-6"
+                    ? "bg-white/90 backdrop-blur-md border-b border-white/20 py-3"
+                    : "bg-transparent py-6"
                     }`}
             >
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="flex items-center justify-between">
                         {/* Brand Badge */}
                         <Link href="/" className="flex items-center">
-                            <div className="bg-white rounded-xl shadow-sm px-4 py-2 flex items-center justify-center">
+                            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 px-7 py-4 flex items-center justify-center">
                                 <Image
                                     src="/logo.png"
                                     alt="RIPEC Logo"
-                                    width={160}
-                                    height={50}
-                                    className="h-10 w-auto object-contain"
+                                    width={320}
+                                    height={100}
+                                    className="h-16 md:h-18 w-auto object-contain"
                                     priority
                                 />
                             </div>
@@ -58,12 +61,12 @@ export default function Navbar() {
                                     key={link.href}
                                     href={link.href}
                                     className={`text-sm font-semibold tracking-wide transition-all duration-300 ${pathname === link.href
-                                            ? isScrolled
-                                                ? "text-orange-500"
-                                                : "text-white drop-shadow-md"
-                                            : isScrolled
-                                                ? "text-slate-800 hover:text-orange-500"
-                                                : "text-white/90 hover:text-white drop-shadow-sm"
+                                        ? isScrolled || !hasDarkHero
+                                            ? "text-orange-500"
+                                            : "text-white drop-shadow-md"
+                                        : isScrolled || !hasDarkHero
+                                            ? "text-slate-800 hover:text-orange-500"
+                                            : "text-white/90 hover:text-white drop-shadow-sm"
                                         }`}
                                 >
                                     {link.label}
@@ -84,7 +87,7 @@ export default function Navbar() {
                             </a>
                             <button
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                                className={`md:hidden transition-colors ${isScrolled ? "text-slate-800" : "text-white"
+                                className={`md:hidden transition-colors ${isScrolled || !hasDarkHero ? "text-slate-800" : "text-white"
                                     }`}
                                 aria-label="Toggle menu"
                             >
@@ -114,8 +117,8 @@ export default function Navbar() {
                                     href={link.href}
                                     onClick={() => setIsMobileMenuOpen(false)}
                                     className={`py-4 text-lg font-semibold border-b border-gray-100 transition-colors ${pathname === link.href
-                                            ? "text-orange-500"
-                                            : "text-slate-800 hover:text-orange-500"
+                                        ? "text-orange-500"
+                                        : "text-slate-800 hover:text-orange-500"
                                         }`}
                                 >
                                     {link.label}
