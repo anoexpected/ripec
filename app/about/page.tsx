@@ -52,13 +52,10 @@ export default function About() {
         <main className="bg-white">
             {/* Hero Section - The Cover Story */}
             <section className="bg-slate-950 min-h-screen pt-32 pb-0 relative overflow-hidden">
-                {/* Main Container Overlay - The Seam Eraser */}
-                <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/95 via-60% to-transparent z-10 pointer-events-none"></div>
-
                 <div className="max-w-7xl mx-auto px-6 h-full">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center h-full">
-                        {/* Text Left */}
-                        <div className="py-12 relative z-30">
+                    <div className="grid lg:grid-cols-2 gap-0 items-center h-full">
+                        {/* Text Left - Solid Dark Background */}
+                        <div className="py-12 relative z-20 bg-slate-950 lg:pr-16">
                             <p className="text-orange-500 font-bold tracking-widest text-sm mb-6">
                                 THE FOUNDER'S PROFILE
                             </p>
@@ -70,20 +67,23 @@ export default function About() {
                             </p>
                         </div>
 
-                        {/* Image Right */}
+                        {/* Image Right - Clean and Bright */}
                         <div className="relative h-[600px] lg:h-screen">
                             <div className="relative h-full rounded-t-2xl lg:rounded-none overflow-hidden">
-                                {/* Director image */}
+                                {/* Director image - Brightened */}
                                 <Image
                                     src="/images/director.jpg"
                                     alt="Dr. Tendai Mavundutse"
                                     fill
-                                    className="object-cover"
+                                    className="object-cover brightness-110 contrast-105"
                                     priority
                                 />
 
-                                {/* Image Container Vignette - The Grounding */}
-                                <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-slate-950 via-transparent to-transparent z-20"></div>
+                                {/* Subtle left edge gradient for blending */}
+                                <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-slate-950 via-slate-950/40 to-transparent z-10"></div>
+
+                                {/* Gentle bottom vignette - much lighter */}
+                                <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent z-10"></div>
                             </div>
                         </div>
                     </div>
