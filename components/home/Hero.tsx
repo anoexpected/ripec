@@ -37,13 +37,6 @@ export default function Hero() {
             <div className="relative z-20 h-full">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center justify-start">
                     <div className="w-full md:w-1/2 lg:w-5/12 ml-0">
-                        <div className="inline-flex items-center gap-2 bg-green-500/20 backdrop-blur-sm border border-green-400/30 rounded-full px-4 py-2 mb-6">
-                            <CheckCircle className="w-4 h-4 text-green-400" />
-                            <span className="text-sm font-medium text-green-100">
-                                Govt Registered: 4401/2024
-                            </span>
-                        </div>
-
                         <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">
                             Your{" "}
                             <span className="bg-gradient-to-r from-amber-400 via-orange-500 to-amber-600 bg-clip-text text-transparent">

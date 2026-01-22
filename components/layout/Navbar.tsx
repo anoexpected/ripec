@@ -35,7 +35,7 @@ export default function Navbar() {
         <>
             <nav
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-                    ? "bg-white/90 backdrop-blur-md border-b border-white/20 py-3"
+                    ? "bg-white border-b border-gray-200 py-3"
                     : "bg-transparent py-6"
                     }`}
             >
@@ -43,13 +43,13 @@ export default function Navbar() {
                     <div className="flex items-center justify-between">
                         {/* Brand Badge */}
                         <Link href="/" className="flex items-center">
-                            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 px-7 py-4 flex items-center justify-center">
+                            <div className="px-2 py-2 flex items-center justify-center">
                                 <Image
                                     src="/logo.png"
                                     alt="RIPEC Logo"
-                                    width={320}
+                                    width={360}
                                     height={100}
-                                    className="h-16 md:h-18 w-auto object-contain"
+                                    className="h-16 md:h-20 w-auto object-contain"
                                     priority
                                 />
                             </div>

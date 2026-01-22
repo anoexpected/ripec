@@ -212,6 +212,7 @@ export default function Contact() {
                                         <option value="China">China</option>
                                         <option value="Malaysia">Malaysia</option>
                                         <option value="UAE">UAE</option>
+                                        <option value="Mauritius">Mauritius</option>
                                         <option value="Not Sure">Not Sure</option>
                                     </select>
                                 </div>

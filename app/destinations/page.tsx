@@ -47,7 +47,7 @@ const countries = {
             "Cultural Immersion",
         ],
         partners: [
-            { name: "YOUDU EDUCATION" },
+            { name: "YOUDU EDUCATION", logo: undefined },
         ],
     },
     malaysia: {
@@ -80,6 +80,22 @@ const countries = {
         ],
         partners: [
             { name: "Britts Imperial", logo: "/partners/britts-imperial.png" },
+        ],
+    },
+    mauritius: {
+        name: "Mauritius",
+        tagline: "Island Paradise with World-Class Education",
+        image: "/countries/Mauritius.jpg",
+        description:
+            "Experience premium education in a tropical paradise. Mauritius combines academic excellence with a safe, multicultural environment and stunning natural beauty.",
+        benefits: [
+            "Safe & Welcoming Environment",
+            "English-Medium Instruction",
+            "International Recognition",
+            "Beautiful Island Setting",
+        ],
+        partners: [
+            { name: "Top Universities in Mauritius", logo: undefined },
         ],
     },
 };
