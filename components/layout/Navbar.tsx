@@ -12,7 +12,7 @@ export default function Navbar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     // Pages with dark hero backgrounds where white text is needed
-    const hasDarkHero = pathname === "/";
+    const hasDarkHero = pathname === "/" || pathname === "/about" || pathname === "/profile";
 
     useEffect(() => {
         const handleScroll = () => {
@@ -27,6 +27,7 @@ export default function Navbar() {
         { href: "/", label: "Home" },
         { href: "/services", label: "Services" },
         { href: "/destinations", label: "Study Destinations" },
+        { href: "/about", label: "About Us" },
         { href: "/contact", label: "Contact" },
     ];
 

@@ -80,7 +80,7 @@ export default function DirectorNote() {
 
                         {/* CTA Button */}
                         <Link
-                            href="/about"
+                            href="/profile"
                             className="inline-flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-800 transition-colors duration-300 shadow-lg hover:shadow-xl"
                         >
                             View Full Professional Profile
