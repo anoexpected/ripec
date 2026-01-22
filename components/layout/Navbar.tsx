@@ -78,13 +78,13 @@ export default function Navbar() {
                         {/* Action Button & Mobile Menu Toggle */}
                         <div className="flex items-center gap-4">
                             <a
-                                href="https://wa.me/263772644806"
+                                href="https://whatsapp.com/channel/0029Vb5jYdb2ER6qUPwqRa15"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="hidden sm:flex items-center gap-2 bg-orange-500 text-white rounded-full px-6 py-2.5 font-bold shadow-lg shadow-orange-500/30 transition-transform hover:-translate-y-0.5"
                             >
                                 <MessageCircle className="w-4 h-4" />
-                                WhatsApp
+                                WhatsApp Channel
                             </a>
                             <button
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
