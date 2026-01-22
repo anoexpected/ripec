@@ -82,6 +82,9 @@ export default function About() {
                                 {/* Subtle left edge gradient for blending */}
                                 <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-slate-950 via-slate-950/40 to-transparent z-10"></div>
 
+                                {/* Subtle right edge gradient for blending */}
+                                <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-slate-950 via-slate-950/40 to-transparent z-10"></div>
+
                                 {/* Gentle bottom vignette - much lighter */}
                                 <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent z-10"></div>
                             </div>
