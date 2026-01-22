@@ -16,6 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://ripec.com"),
     title: "RIPEC | Resume International Pathway Education Consultancy",
     description: "Your trusted gateway to global education. We navigate scholarships, visas, and admissions for Zimbabwe students to India, China, Malaysia, and the UAE.",
     icons: {
