@@ -38,6 +38,11 @@ export default function Footer() {
                                 </Link>
                             </li>
                             <li>
+                                <Link href="/about" className="text-sm text-slate-400 hover:text-orange-500 transition-colors duration-300">
+                                    About Us
+                                </Link>
+                            </li>
+                            <li>
                                 <Link href="/contact" className="text-sm text-slate-400 hover:text-orange-500 transition-colors duration-300">
                                     Contact Us
                                 </Link>
