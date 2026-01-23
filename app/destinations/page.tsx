@@ -128,20 +128,34 @@ function DestinationsContent() {
                 </div>
 
                 {/* Country Switcher Tabs */}
-                <div className="flex justify-center mb-12 overflow-x-auto scrollbar-hide">
-                    <div className="flex gap-4 px-4">
-                        {Object.keys(countries).map((key) => (
-                            <button
-                                key={key}
-                                onClick={() => setActiveTab(key)}
-                                className={`px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 whitespace-nowrap ${activeTab === key
-                                    ? "bg-orange-500 text-white shadow-lg"
-                                    : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-                                    }`}
-                            >
-                                {countries[key as keyof typeof countries].name}
-                            </button>
-                        ))}
+                <div className="mb-12">
+                    <div className="overflow-x-auto scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0">
+                        <div className="flex gap-3 sm:gap-4 justify-start sm:justify-center min-w-max sm:min-w-0">
+                            {Object.keys(countries).map((key) => (
+                                <button
+                                    key={key}
+                                    onClick={() => setActiveTab(key)}
+                                    className={`px-6 py-2.5 sm:px-8 sm:py-3 rounded-full font-semibold text-base sm:text-lg transition-all duration-300 whitespace-nowrap flex-shrink-0 ${activeTab === key
+                                        ? "bg-orange-500 text-white shadow-lg"
+                                        : "bg-gray-100 text-gray-600 hover:bg-gray-200"
+                                        }`}
+                                >
+                                    {countries[key as keyof typeof countries].name}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+                    {/* Scroll indicator hint for mobile */}
+                    <div className="flex sm:hidden justify-center mt-3">
+                        <div className="flex gap-1.5">
+                            {Object.keys(countries).map((key, index) => (
+                                <div
+                                    key={key}
+                                    className={`h-1 rounded-full transition-all duration-300 ${activeTab === key ? "w-6 bg-orange-500" : "w-1.5 bg-gray-300"
+                                        }`}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

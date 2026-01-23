@@ -193,10 +193,11 @@ export default function StudentVoices() {
                         {/* YouTube Embed */}
                         <iframe
                             className="w-full h-full rounded-xl shadow-2xl"
-                            src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1`}
+                            src={`https://www.youtube.com/embed/${activeVideo}?autoplay=1&rel=0&modestbranding=1`}
                             title="Student Testimonial"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowFullScreen
+                            frameBorder="0"
                         ></iframe>
                     </div>
                 </div>
