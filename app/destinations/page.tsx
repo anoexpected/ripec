@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { CheckCircle, ArrowRight, Building2 } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 
 const countries = {
@@ -100,7 +100,7 @@ const countries = {
     },
 };
 
-export default function Destinations() {
+function DestinationsContent() {
     const searchParams = useSearchParams();
     const router = useRouter();
     const countryParam = searchParams.get("country");
@@ -262,5 +262,13 @@ export default function Destinations() {
                 </div>
             </div>
         </main>
+    );
+}
+
+export default function Destinations() {
+    return (
+        <Suspense fallback={<div className="bg-white min-h-screen pt-28 flex items-center justify-center"><div className="text-lg text-gray-600">Loading...</div></div>}>
+            <DestinationsContent />
+        </Suspense>
     );
 }
