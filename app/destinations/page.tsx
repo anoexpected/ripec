@@ -128,14 +128,14 @@ function DestinationsContent() {
                 </div>
 
                 {/* Country Switcher Tabs */}
-                <div className="flex justify-center mb-12 overflow-x-auto scrollbar-hide">
-                    <div className="flex gap-4 px-4">
+                <div className="mb-12">
+                    <div className="flex gap-2 md:gap-4 overflow-x-auto scrollbar-hide px-4 md:justify-center pb-2">
                         {Object.keys(countries).map((key) => (
                             <button
                                 key={key}
                                 onClick={() => setActiveTab(key)}
-                                className={`px-8 py-3 rounded-full font-semibold text-lg transition-all duration-300 whitespace-nowrap ${activeTab === key
-                                    ? "bg-orange-500 text-white shadow-lg"
+                                className={`px-4 md:px-8 py-2 md:py-3 rounded-full font-semibold text-sm md:text-lg transition-all duration-300 whitespace-nowrap flex-shrink-0 ${activeTab === key
+                                    ? "bg-orange-500 text-white shadow-lg scale-105"
                                     : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                                     }`}
                             >
