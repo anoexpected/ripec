@@ -67,10 +67,10 @@ export default function Services() {
                 </div>
 
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-                    <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 md:mb-6">
                         More Than Just an Application.
                     </h1>
-                    <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-lg sm:text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
                         A complete ecosystem of support from your first question to your graduation day.
                     </p>
                 </div>
@@ -79,11 +79,11 @@ export default function Services() {
             {/* Process Timeline */}
             <section className="py-20 bg-white">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                    <div className="text-center mb-12 md:mb-16">
+                        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
                             The Journey Blueprint
                         </h2>
-                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                        <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
                             From confusion to confidence. We guide you through every step of studying abroad.
                         </p>
                     </div>
@@ -98,25 +98,25 @@ export default function Services() {
                                 return (
                                     <div
                                         key={index}
-                                        className="relative bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12 hover:shadow-md transition-shadow duration-300"
+                                        className="relative bg-white rounded-xl md:rounded-2xl shadow-sm border border-gray-100 p-6 sm:p-8 md:p-12 hover:shadow-md transition-shadow duration-300"
                                     >
-                                        <div className="grid md:grid-cols-[auto,1fr] gap-8 items-start">
+                                        <div className="grid md:grid-cols-[auto,1fr] gap-6 md:gap-8 items-start">
                                             {/* Icon Section */}
                                             <div className="flex flex-col items-center md:items-start">
-                                                <div className="bg-orange-50 text-orange-600 rounded-xl w-16 h-16 flex items-center justify-center mb-4 relative z-10">
-                                                    <Icon className="w-8 h-8" />
+                                                <div className="bg-orange-50 text-orange-600 rounded-xl w-14 h-14 md:w-16 md:h-16 flex items-center justify-center mb-3 md:mb-4 relative z-10">
+                                                    <Icon className="w-7 h-7 md:w-8 md:h-8" />
                                                 </div>
-                                                <span className="text-sm font-semibold text-orange-600 uppercase tracking-wider">
+                                                <span className="text-xs md:text-sm font-semibold text-orange-600 uppercase tracking-wider">
                                                     {service.chapter}
                                                 </span>
                                             </div>
 
                                             {/* Content Section */}
                                             <div>
-                                                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                                                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 md:mb-4">
                                                     {service.headline}
                                                 </h3>
-                                                <p className="text-lg text-gray-600 leading-relaxed">
+                                                <p className="text-base md:text-lg text-gray-600 leading-relaxed">
                                                     {service.description}
                                                 </p>
                                             </div>
@@ -164,20 +164,20 @@ export default function Services() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 bg-gradient-to-br from-orange-500 to-orange-600">
+            <section className="py-16 md:py-20 bg-gradient-to-br from-orange-500 to-orange-600">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 md:mb-6">
                         Ready to start your Chapter 1?
                     </h2>
-                    <p className="text-xl text-orange-100 mb-8 max-w-2xl mx-auto">
+                    <p className="text-base sm:text-lg md:text-xl text-orange-100 mb-6 md:mb-8 max-w-2xl mx-auto">
                         Book a free consultation with our education counselors and begin your journey today.
                     </p>
                     <button
                         onClick={() => router.push('/contact?service=General%20Consultation')}
-                        className="inline-flex items-center gap-3 bg-white text-orange-600 px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+                        className="inline-flex items-center gap-2 md:gap-3 bg-white text-orange-600 px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
                     >
                         Book Free Consultation
-                        <ArrowRight className="w-5 h-5" />
+                        <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
                     </button>
                 </div>
             </section>

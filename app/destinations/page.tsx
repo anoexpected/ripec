@@ -118,11 +118,11 @@ function DestinationsContent() {
         <main className="bg-white min-h-screen pt-28">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Page Header */}
-                <div className="text-center py-8">
-                    <h1 className="text-4xl font-bold text-gray-900 mb-4">
+                <div className="text-center py-6 md:py-8">
+                    <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3 md:mb-4 px-4">
                         Explore Top Study Destinations
                     </h1>
-                    <p className="text-lg text-gray-600">
+                    <p className="text-base sm:text-lg text-gray-600">
                         Select a country to explore opportunities.
                     </p>
                 </div>
@@ -149,8 +149,8 @@ function DestinationsContent() {
             {/* Active Country View */}
             <div>
                 {/* Hero Image */}
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-                    <div className="relative min-h-[60vh] h-[500px] w-full rounded-3xl overflow-hidden">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 md:mb-16">
+                    <div className="relative min-h-[50vh] md:min-h-[60vh] h-[400px] md:h-[500px] w-full rounded-2xl md:rounded-3xl overflow-hidden">
                         <Image
                             src={activeCountry.image}
                             alt={activeCountry.name}
@@ -158,15 +158,15 @@ function DestinationsContent() {
                             className="object-cover w-full h-full"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
-                        <div className="absolute bottom-0 left-0 p-8 md:p-12 text-white">
-                            <div className="inline-flex items-center gap-2 backdrop-blur-md bg-white/10 border border-white/20 text-white px-4 py-1.5 rounded-full text-sm font-medium uppercase tracking-widest mb-6">
-                                <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                        <div className="absolute bottom-0 left-0 p-6 sm:p-8 md:p-12 text-white">
+                            <div className="inline-flex items-center gap-1.5 md:gap-2 backdrop-blur-md bg-white/10 border border-white/20 text-white px-3 py-1 md:px-4 md:py-1.5 rounded-full text-xs md:text-sm font-medium uppercase tracking-widest mb-4 md:mb-6">
+                                <span className="w-1.5 h-1.5 md:w-2 md:h-2 rounded-full bg-green-400 animate-pulse" />
                                 Open for Applications
                             </div>
-                            <h2 className="text-7xl md:text-9xl font-black tracking-tighter mb-3 drop-shadow-2xl">
+                            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl font-black tracking-tighter mb-2 md:mb-3 drop-shadow-2xl">
                                 {activeCountry.name}
                             </h2>
-                            <p className="text-xl md:text-2xl text-gray-200 font-light tracking-wide drop-shadow-2xl">
+                            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 font-light tracking-wide drop-shadow-2xl">
                                 {activeCountry.tagline}
                             </p>
                         </div>
@@ -174,21 +174,21 @@ function DestinationsContent() {
                 </div>
 
                 {/* Why Study Here Section */}
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
                         {/* Left: Key Benefits Card */}
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                        <div className="bg-white p-6 md:p-8 rounded-xl md:rounded-2xl shadow-sm border border-gray-100">
+                            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-5 md:mb-6">
                                 At a Glance
                             </h3>
-                            <div className="space-y-5">
+                            <div className="space-y-4 md:space-y-5">
                                 {activeCountry.benefits.map((benefit, index) => (
                                     <div
                                         key={index}
-                                        className="flex items-start gap-4"
+                                        className="flex items-start gap-3 md:gap-4"
                                     >
-                                        <CheckCircle className="w-7 h-7 text-green-500 flex-shrink-0 mt-0.5" />
-                                        <span className="text-lg text-gray-700 font-medium">
+                                        <CheckCircle className="w-6 h-6 md:w-7 md:h-7 text-green-500 flex-shrink-0 mt-0.5" />
+                                        <span className="text-base md:text-lg text-gray-700 font-medium">
                                             {benefit}
                                         </span>
                                     </div>
@@ -197,37 +197,37 @@ function DestinationsContent() {
                         </div>
 
                         {/* Right: Description Card with CTA */}
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+                        <div className="bg-white p-6 md:p-8 rounded-xl md:rounded-2xl shadow-sm border border-gray-100">
+                            <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-5 md:mb-6">
                                 Why Study Here?
                             </h3>
-                            <p className="text-lg text-gray-600 leading-relaxed mb-8">
+                            <p className="text-base md:text-lg text-gray-600 leading-relaxed mb-6 md:mb-8">
                                 {activeCountry.description}
                             </p>
                             <button
                                 onClick={() => router.push(`/contact?destination=${encodeURIComponent(activeCountry.name)}`)}
-                                className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 text-white font-semibold rounded-lg hover:bg-orange-600 transition-colors duration-300 shadow-md hover:shadow-lg"
+                                className="inline-flex items-center gap-2 px-5 py-2.5 md:px-6 md:py-3 bg-orange-500 text-white font-semibold text-sm md:text-base rounded-lg hover:bg-orange-600 transition-colors duration-300 shadow-md hover:shadow-lg"
                             >
                                 Enquire about {activeCountry.name}
-                                <ArrowRight className="w-5 h-5" />
+                                <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
                             </button>
                         </div>
                     </div>
                 </div>
 
                 {/* Partner Institutions */}
-                <div className="bg-gray-50 py-16">
+                <div className="bg-gray-50 py-12 md:py-16">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <h3 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+                        <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-8 md:mb-12 text-center">
                             Partner Institutions
                         </h3>
 
                         {activeCountry.partners.length > 0 ? (
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                                 {activeCountry.partners.map((partner, index) => (
                                     <div
                                         key={index}
-                                        className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center min-h-[120px]"
+                                        className="bg-white p-4 md:p-6 rounded-lg md:rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 flex items-center justify-center min-h-[100px] md:min-h-[120px]"
                                     >
                                         {partner.logo ? (
                                             <Image
@@ -235,10 +235,10 @@ function DestinationsContent() {
                                                 alt={partner.name}
                                                 width={120}
                                                 height={60}
-                                                className="h-16 w-auto object-contain"
+                                                className="h-12 md:h-16 w-auto object-contain"
                                             />
                                         ) : (
-                                            <span className="text-center text-gray-800 font-semibold text-base">
+                                            <span className="text-center text-gray-800 font-semibold text-sm md:text-base px-2">
                                                 {partner.name}
                                             </span>
                                         )}
@@ -247,12 +247,12 @@ function DestinationsContent() {
                             </div>
                         ) : (
                             <div className="max-w-2xl mx-auto text-center">
-                                <div className="bg-white border-2 border-orange-200 rounded-2xl p-10 shadow-sm">
-                                    <Building2 className="w-12 h-12 text-orange-500 mx-auto mb-4" />
-                                    <p className="text-lg text-gray-800 font-semibold mb-2">
+                                <div className="bg-white border-2 border-orange-200 rounded-xl md:rounded-2xl p-6 md:p-10 shadow-sm">
+                                    <Building2 className="w-10 h-10 md:w-12 md:h-12 text-orange-500 mx-auto mb-3 md:mb-4" />
+                                    <p className="text-base md:text-lg text-gray-800 font-semibold mb-2">
                                         Government & Private Universities
                                     </p>
-                                    <p className="text-gray-600">
+                                    <p className="text-sm md:text-base text-gray-600">
                                         We partner with top-ranked institutions in {activeCountry.name}.
                                     </p>
                                 </div>

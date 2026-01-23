@@ -60,20 +60,20 @@ export default function StudentVoices() {
     };
 
     return (
-        <section className="py-24 bg-gray-50">
-            <div className="max-w-7xl mx-auto px-6">
+        <section className="py-16 md:py-20 lg:py-24 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 {/* Section Header */}
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+                <div className="text-center mb-12 md:mb-16">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-3 md:mb-4">
                         Don't Just Take Our Word For It.
                     </h2>
-                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
                         Hear from Zimbabwean students currently studying abroad.
                     </p>
                 </div>
 
                 {/* Row 1: Video Testimonials */}
-                <div className="grid md:grid-cols-2 gap-8 mb-20">
+                <div className="grid md:grid-cols-2 gap-6 md:gap-8 mb-16 md:mb-20">
                     {videos.map((video) => (
                         <div
                             key={video.id}

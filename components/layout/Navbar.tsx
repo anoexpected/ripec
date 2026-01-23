@@ -127,13 +127,13 @@ export default function Navbar() {
                             ))}
                             <div className="mt-8">
                                 <a
-                                    href="https://wa.me/263772644806"
+                                    href="https://whatsapp.com/channel/0029Vb5jYdb2ER6qUPwqRa15"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center justify-center gap-2 bg-orange-500 text-white rounded-full px-6 py-3 font-bold shadow-lg shadow-orange-500/30"
                                 >
                                     <MessageCircle className="w-4 h-4" />
-                                    WhatsApp Us
+                                    WhatsApp Channel
                                 </a>
                             </div>
                         </div>
