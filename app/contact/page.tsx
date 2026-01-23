@@ -68,28 +68,28 @@ function ContactForm() {
         <main className="bg-white min-h-screen pt-28">
             <div className="grid lg:grid-cols-[40%,60%] min-h-[calc(100vh-7rem)]">
                 {/* Left Column - Dark Section */}
-                <div className="bg-slate-950 p-6 sm:p-8 md:p-12 lg:p-20 flex items-center relative overflow-hidden">
+                <div className="bg-slate-950 p-8 lg:p-20 flex items-center relative overflow-hidden">
                     {/* Decorative blur circles */}
                     <div className="absolute top-10 -left-20 w-64 h-64 bg-orange-500/10 rounded-full blur-3xl"></div>
                     <div className="absolute bottom-10 -right-20 w-80 h-80 bg-orange-500/5 rounded-full blur-3xl"></div>
 
                     <div className="max-w-lg mx-auto relative z-10 w-full">
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white font-bold tracking-tight mb-3 md:mb-4">
+                        <h1 className="text-5xl md:text-6xl text-white font-bold tracking-tight mb-4">
                             Let's Build Your Future.
                         </h1>
-                        <p className="text-slate-400 text-lg sm:text-xl mb-8 md:mb-12">
+                        <p className="text-slate-400 text-xl mb-12">
                             We are ready to guide you.
                         </p>
 
                         {/* Contact Glass Stack */}
-                        <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
+                        <div className="space-y-4 mb-8">
                             {/* Address Card */}
-                            <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-3 md:p-4 rounded-lg md:rounded-xl flex items-center gap-3 md:gap-4 hover:bg-white/10 transition-all duration-300 cursor-pointer group">
-                                <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-orange-500/20 rounded-lg flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
-                                    <MapPin className="w-5 h-5 md:w-6 md:h-6 text-orange-400" />
+                            <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-4 rounded-xl flex items-center gap-4 hover:bg-white/10 transition-all duration-300 cursor-pointer group">
+                                <div className="flex-shrink-0 w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                                    <MapPin className="w-6 h-6 text-orange-400" />
                                 </div>
                                 <div>
-                                    <h3 className="text-white font-semibold text-xs md:text-sm mb-1">Visit Us</h3>
+                                    <h3 className="text-white font-semibold text-sm mb-1">Visit Us</h3>
                                     <p className="text-slate-400 text-xs leading-relaxed">
                                         Stand No. 9468, Hatcliffe Extension,<br />
                                         Borrowdale, Harare, Zimbabwe
@@ -98,24 +98,24 @@ function ContactForm() {
                             </div>
 
                             {/* Phone Card */}
-                            <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-3 md:p-4 rounded-lg md:rounded-xl flex items-center gap-3 md:gap-4 hover:bg-white/10 transition-all duration-300 cursor-pointer group">
-                                <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-orange-500/20 rounded-lg flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
-                                    <Phone className="w-5 h-5 md:w-6 md:h-6 text-orange-400" />
+                            <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-4 rounded-xl flex items-center gap-4 hover:bg-white/10 transition-all duration-300 cursor-pointer group">
+                                <div className="flex-shrink-0 w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                                    <Phone className="w-6 h-6 text-orange-400" />
                                 </div>
                                 <div>
-                                    <h3 className="text-white font-semibold text-xs md:text-sm mb-1">Call Us</h3>
+                                    <h3 className="text-white font-semibold text-sm mb-1">Call Us</h3>
                                     <p className="text-slate-400 text-xs">+263 772 644 806</p>
                                     <p className="text-slate-400 text-xs">+263 776 832 168</p>
                                 </div>
                             </div>
 
                             {/* Email Card */}
-                            <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-3 md:p-4 rounded-lg md:rounded-xl flex items-center gap-3 md:gap-4 hover:bg-white/10 transition-all duration-300 cursor-pointer group">
-                                <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-orange-500/20 rounded-lg flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
-                                    <Mail className="w-5 h-5 md:w-6 md:h-6 text-orange-400" />
+                            <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-4 rounded-xl flex items-center gap-4 hover:bg-white/10 transition-all duration-300 cursor-pointer group">
+                                <div className="flex-shrink-0 w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                                    <Mail className="w-6 h-6 text-orange-400" />
                                 </div>
                                 <div>
-                                    <h3 className="text-white font-semibold text-xs md:text-sm mb-1">Email Us</h3>
+                                    <h3 className="text-white font-semibold text-sm mb-1">Email Us</h3>
                                     <p className="text-slate-400 text-xs">info@ripec.com</p>
                                 </div>
                             </div>
@@ -125,23 +125,23 @@ function ContactForm() {
                                 href="https://whatsapp.com/channel/0029Vb5jYdb2ER6qUPwqRa15"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="bg-green-500/10 backdrop-blur-sm border border-green-500/20 p-3 md:p-4 rounded-lg md:rounded-xl flex items-center gap-3 md:gap-4 hover:bg-green-500/20 transition-all duration-300 cursor-pointer group"
+                                className="bg-green-500/10 backdrop-blur-sm border border-green-500/20 p-4 rounded-xl flex items-center gap-4 hover:bg-green-500/20 transition-all duration-300 cursor-pointer group"
                             >
-                                <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-green-500/20 rounded-lg flex items-center justify-center group-hover:bg-green-500/30 transition-colors">
-                                    <Users className="w-5 h-5 md:w-6 md:h-6 text-green-400" />
+                                <div className="flex-shrink-0 w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center group-hover:bg-green-500/30 transition-colors">
+                                    <Users className="w-6 h-6 text-green-400" />
                                 </div>
                                 <div>
-                                    <h3 className="text-white font-semibold text-xs md:text-sm mb-1">Join our WhatsApp Channel</h3>
+                                    <h3 className="text-white font-semibold text-sm mb-1">Join our WhatsApp Channel</h3>
                                     <p className="text-slate-400 text-xs">Get scholarship updates & news daily</p>
                                 </div>
                             </a>
                         </div>
 
                         {/* Trust Badge */}
-                        <div className="bg-slate-800/50 backdrop-blur-sm border border-white/10 rounded-lg md:rounded-xl p-3 md:p-4 inline-flex items-center gap-2 md:gap-3">
-                            <Shield className="w-4 h-4 md:w-5 md:h-5 text-orange-400" />
+                        <div className="bg-slate-800/50 backdrop-blur-sm border border-white/10 rounded-xl p-4 inline-flex items-center gap-3">
+                            <Shield className="w-5 h-5 text-orange-400" />
                             <div>
-                                <p className="text-white font-semibold text-xs md:text-sm">Government Registered</p>
+                                <p className="text-white font-semibold text-sm">Government Registered</p>
                                 <p className="text-slate-400 text-xs">License: 4401/2024</p>
                             </div>
                         </div>
@@ -149,20 +149,20 @@ function ContactForm() {
                 </div>
 
                 {/* Right Column - Light Section with Form */}
-                <div className="bg-gray-50 p-6 sm:p-8 md:p-12 lg:p-16 flex items-center justify-center">
-                    <div className="w-full max-w-2xl mb-16 lg:mb-0">
-                        <div className="bg-white rounded-2xl md:rounded-3xl shadow-2xl shadow-slate-200/50 p-6 sm:p-8 md:p-10 lg:p-12">
-                            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-2 md:mb-3">
+                <div className="bg-gray-50 p-8 lg:p-16 flex items-center justify-center">
+                    <div className="w-full max-w-2xl mb-24 lg:mb-0">
+                        <div className="bg-white rounded-3xl shadow-2xl shadow-slate-200/50 p-12">
+                            <h2 className="text-3xl font-bold text-gray-900 mb-3">
                                 Request Free Consultation
                             </h2>
-                            <p className="text-sm sm:text-base text-gray-600 mb-6 md:mb-8">
+                            <p className="text-gray-600 mb-8">
                                 Fill out the form below and we'll get back to you within 24 hours.
                             </p>
 
-                            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-5">
+                            <form onSubmit={handleSubmit} className="space-y-5">
                                 {/* Full Name */}
                                 <div>
-                                    <label htmlFor="name" className="block text-xs md:text-sm font-semibold text-gray-700 mb-2">
+                                    <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
                                         Full Name *
                                     </label>
                                     <input
@@ -172,7 +172,7 @@ function ContactForm() {
                                         required
                                         value={formData.name}
                                         onChange={handleChange}
-                                        className="w-full bg-gray-50 border-transparent focus:border-orange-500 focus:bg-white focus:ring-4 focus:ring-orange-500/10 rounded-lg md:rounded-xl px-4 py-3 md:px-5 md:py-4 text-sm md:text-base transition-all outline-none"
+                                        className="w-full bg-gray-50 border-transparent focus:border-orange-500 focus:bg-white focus:ring-4 focus:ring-orange-500/10 rounded-xl px-5 py-4 transition-all outline-none"
                                         placeholder="John Doe"
                                     />
                                 </div>
