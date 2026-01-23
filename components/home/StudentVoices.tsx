@@ -7,17 +7,17 @@ import Image from "next/image";
 const videos = [
     {
         id: 1,
-        name: "Tafadzwa Moyo",
-        university: "Delhi University, India",
+        name: "Pearl Tendaishe Munjeri",
+        university: "Chandigarh University, India",
         thumbnail: "/images/student1.jpg",
-        youtubeId: "dQw4w9WgXcQ", // Replace with actual YouTube video ID
+        youtubeId: "NlLIl4OMJFY", // Replace with actual YouTube video ID
     },
     {
         id: 2,
-        name: "Rumbidzai Chikwanha",
-        university: "Xiamen University, China",
+        name: "Matiyeuka Martin Munyenyiwa",
+        university: "Chandigarh University, India",
         thumbnail: "/images/student2.jpg",
-        youtubeId: "dQw4w9WgXcQ", // Replace with actual YouTube video ID
+        youtubeId: "6IR_ju4H0wQ", // Replace with actual YouTube video ID
     },
 ];
 
