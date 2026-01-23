@@ -1,10 +1,10 @@
 "use client";
 
 import { MapPin, Phone, Mail, Shield, Users } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
-export default function Contact() {
+function ContactForm() {
     const searchParams = useSearchParams();
     const destinationParam = searchParams.get("destination");
     const serviceParam = searchParams.get("service");
@@ -272,5 +272,13 @@ export default function Contact() {
                 </div>
             </div>
         </main>
+    );
+}
+
+export default function Contact() {
+    return (
+        <Suspense fallback={<div className="bg-white min-h-screen pt-28 flex items-center justify-center"><div className="text-lg text-gray-600">Loading...</div></div>}>
+            <ContactForm />
+        </Suspense>
     );
 }
