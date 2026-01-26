@@ -26,7 +26,7 @@ const credentials = [
         icon: GraduationCap,
         degree: "PhD",
         field: "Educational Administration",
-        institution: "University of Zimbabwe",
+        institution: "Atlantic International University, USA",
     },
     {
         icon: Award,
@@ -193,7 +193,7 @@ export default function Profile() {
                     <div className="text-orange-500 text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-serif leading-none mb-6 sm:mb-8">"</div>
 
                     <blockquote className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white leading-relaxed mb-8 sm:mb-10 md:mb-12">
-                        I did not start RIPEC to be another agency. I started it because I know exactly why students get rejected, and I know exactly how to get them accepted.
+                        I did not start RIPEC to be another agency. I started it because I know why students get rejected, and I know how to get them accepted.
                     </blockquote>
 
                     {/* Signature */}

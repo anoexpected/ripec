@@ -8,10 +8,10 @@ import { useSearchParams, useRouter } from "next/navigation";
 const countries = {
     india: {
         name: "India",
-        tagline: "Home to world class insitutions",
+        tagline: "Home to world class institutions",
         image: "/countries/india.jpg",
         description:
-            "India offers world class higher education at a fraction of the global cost. We have negotiated 50-100% tuition scholarships specifically for our students.",
+            "India offers world class higher education at a fraction of the global cost. We have negotiated 50-100% tuition free scholarships specifically for our students.",
         benefits: [
             "50-100% Tuition Waivers",
             "No IELTS Required",

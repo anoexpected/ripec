@@ -8,7 +8,7 @@ const destinations = [
         slug: "india",
         image: "/countries/india.jpg",
         description:
-            "Home to world-class technical institutes. We secure 50–100% tuition waivers for eligible students.",
+            "Home to world class institutions. We secure 50–100% tuition waivers for eligible students.",
     },
     {
         name: "China",

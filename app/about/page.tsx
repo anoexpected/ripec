@@ -152,7 +152,7 @@ export default function About() {
                         Guided by Experience. Led by Dr. Tendai Mavundutse.
                     </h2>
                     <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-8 md:mb-10 leading-relaxed max-w-2xl mx-auto">
-                        RIPEC was founded by Zimbabwe's former Director of National Scholarships, a leader with four decades of experience in education and student placement at the highest levels of government.
+                        RIPEC was founded by Zimbabwe's former Director of National Scholarships, a leader with three decades of experience in education and student placement at the highest levels of government.
                     </p>
                     <Link
                         href="/profile"

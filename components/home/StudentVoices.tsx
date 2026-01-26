@@ -27,7 +27,7 @@ const quotes = [
         name: "Tanaka Mutasa",
         destination: "India",
         flag: "🇮🇳",
-        quote: "RIPEC made my dream of studying medicine a reality. The scholarship they secured covered 100% of my tuition!",
+        quote: "RIPEC made my dream of studying DPharm a reality. The scholarship they secured covered 75% of my tuition!",
         avatar: "/images/avatar1.jpg",
     },
     {
