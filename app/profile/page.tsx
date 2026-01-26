@@ -11,16 +11,11 @@ const careerMilestones = [
     },
     {
         level: 2,
-        title: "Deputy Director: Office of the Vice President",
-        description: "Advised on national education policy at the highest levels of government, shaping strategic initiatives that impacted the entire education sector.",
-    },
-    {
-        level: 3,
         title: "Provincial & District Leadership",
         description: "Managed education quality assurance across multiple districts, conducting rigorous evaluations and implementing comprehensive frameworks.",
     },
     {
-        level: 4,
+        level: 3,
         title: "Head of School & Teacher",
         description: "Built a foundation of excellence from the classroom to administrative leadership in both primary and secondary education.",
     },
@@ -36,13 +31,13 @@ const credentials = [
     {
         icon: Award,
         degree: "Master of Education",
-        field: "Planning & Policy",
+        field: " Educational  Administration Planning and Policy Studies",
         institution: "University of Zimbabwe",
     },
     {
         icon: ScrollText,
         degree: "Bachelor of Education",
-        field: "Administration",
+        field: " Educational  Administration Planning and Policy Studies",
         institution: "University of Zimbabwe",
     },
 ];
@@ -60,10 +55,10 @@ export default function Profile() {
                                 THE FOUNDER'S PROFILE
                             </p>
                             <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 sm:mb-8 leading-tight">
-                                The Architect of Zimbabwe's Scholarship Strategy.
+                                Decades of Leadership at the Highest Level.
                             </h1>
                             <p className="text-lg sm:text-xl md:text-2xl text-slate-300 leading-relaxed max-w-xl">
-                                Dr. Tendai Mavundutse served as the Director of National Scholarships and in the Vice President's Office. Now, she works for you.
+                                Dr Tendai Mavundutse served as Director Presidential and National Scholarships and as Deputy Director in the  Honourable Vice President's Office : Republic of Zimbabwe.
                             </p>
                         </div>
 
@@ -95,7 +90,7 @@ export default function Profile() {
                             A Career Defined by Impact
                         </h2>
                         <p className="text-lg sm:text-xl text-gray-600">
-                            Four decades of shaping educational excellence
+                            Three decades of shaping educational excellence
                         </p>
                     </div>
 

@@ -48,7 +48,7 @@ const benefits = [
     {
         icon: Users,
         title: "Post-Study Support",
-        subtitle: "We're here beyond graduation",
+        subtitle: "We're there beyond graduation",
     },
 ];
 

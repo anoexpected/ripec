@@ -8,10 +8,10 @@ import { useSearchParams, useRouter } from "next/navigation";
 const countries = {
     india: {
         name: "India",
-        tagline: "The Hub of Affordable Quality Education",
+        tagline: "Home to world class insitutions",
         image: "/countries/india.jpg",
         description:
-            "India offers world-class technical education at a fraction of the global cost. We have negotiated 50-100% tuition scholarships specifically for our students.",
+            "India offers world class higher education at a fraction of the global cost. We have negotiated 50-100% tuition scholarships specifically for our students.",
         benefits: [
             "50-100% Tuition Waivers",
             "No IELTS Required",
@@ -55,9 +55,9 @@ const countries = {
         tagline: "Your Gateway to UK/US Degrees in Asia",
         image: "/countries/Malaysia.jpg",
         description:
-            "Malaysia is a hub for international education offering affordable tuition and dual-degree programs with prestigious UK and US universities.",
+            "Malaysia is a hub for international education offering affordable tuition and dual-degree programmes with prestigious UK and US universities.",
         benefits: [
-            "Dual-Degree Programs",
+            "Dual-Degree Programmes",
             "Affordable Tuition",
             "English-Medium Education",
             "Multicultural Environment",

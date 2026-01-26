@@ -67,7 +67,7 @@ export default function DirectorNote() {
                         <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-6 sm:mb-8">
                             "With decades of experience shaping Zimbabwe's national education strategy,
                             I founded RIPEC to ensure every student has access to global opportunities.
-                            I have sat in the offices where decisions are made—now, I am using that
+                            I have sat in the offices where decisions are made-now, I am using that
                             experience to guide you."
                         </p>
 

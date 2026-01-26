@@ -27,7 +27,7 @@ export default function About() {
                         More Than a Consultancy. We Are a Launchpad.
                     </h1>
                     <p className="text-lg sm:text-xl md:text-2xl text-slate-200 leading-relaxed max-w-3xl mx-auto">
-                        RIPEC exists to democratize access to global education for every Zimbabwean student.
+                        RIPEC exists to democratize access to global education for every aspiring student.
                     </p>
                 </div>
             </section>
@@ -46,7 +46,7 @@ export default function About() {
                                     We bridge the gap between extraordinary talent and unprecedented opportunity.
                                 </p>
                                 <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
-                                    Too many brilliant Zimbabwean students never reach their potential—not because they lack ability, but because they lack access. Access to information. Access to networks. Access to guidance that understands both their reality and the expectations of global institutions.
+                                    Too many brilliant Zimbabwean students never reach their potential-not because they lack ability, but because they lack access. Access to information. Access to networks. Access to guidance that understands both their reality and the expectations of global institutions.
                                 </p>
                                 <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed">
                                     RIPEC was founded to change that equation. We exist to ensure that every qualified student, regardless of background, has a clear pathway to the world's best universities.
@@ -76,8 +76,7 @@ export default function About() {
                         Our Vision
                     </h2>
                     <p className="font-serif text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white leading-relaxed">
-                        By 2030, we will be the primary gateway through which Zimbabwean students access world-class education—transforming aspiration into achievement, one student at a time.
-                    </p>
+                        We exist to ensure that every qualified student, regardless of background, has a clear pathway to the world's best universities.                    </p>
                 </div>
             </section>
 

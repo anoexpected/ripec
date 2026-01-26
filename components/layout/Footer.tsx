@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Phone, Mail, CheckCircle, Facebook, Linkedin } from "lucide-react";
+import { MapPin, Phone, Mail, CheckCircle, Facebook, Instagram } from "lucide-react";
 
 export default function Footer() {
     return (
@@ -64,9 +64,11 @@ export default function Footer() {
                             </li>
                             <li className="flex items-start gap-3">
                                 <Phone size={18} className="text-orange-500 flex-shrink-0 mt-0.5" />
-                                <span className="text-sm text-slate-400">
-                                    +263 772 644 806
-                                </span>
+                                <div className="flex flex-col gap-1">
+                                    <span className="text-sm text-slate-400">+263 772 644 806</span>
+                                    <span className="text-sm text-slate-400">+263 776 832 168</span>
+                                    <span className="text-sm text-slate-400">+263 715 694 979</span>
+                                </div>
                             </li>
                             <li className="flex items-start gap-3">
                                 <Mail size={18} className="text-orange-500 flex-shrink-0 mt-0.5" />
@@ -108,18 +110,22 @@ export default function Footer() {
                         </p>
                         <div className="flex items-center gap-4">
                             <a
-                                href="#"
+                                href="https://www.facebook.com/people/Ripec-Pathway/61587120987663/"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-slate-400 hover:text-orange-500 transition-colors duration-300"
                                 aria-label="Facebook"
                             >
                                 <Facebook size={20} />
                             </a>
                             <a
-                                href="#"
+                                href="https://www.instagram.com/resumeinternational/"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="text-slate-400 hover:text-orange-500 transition-colors duration-300"
-                                aria-label="LinkedIn"
+                                aria-label="Instagram"
                             >
-                                <Linkedin size={20} />
+                                <Instagram size={20} />
                             </a>
                         </div>
                     </div>

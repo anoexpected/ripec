@@ -106,6 +106,7 @@ function ContactForm() {
                                     <h3 className="text-white font-semibold text-sm mb-1">Call Us</h3>
                                     <p className="text-slate-400 text-xs">+263 772 644 806</p>
                                     <p className="text-slate-400 text-xs">+263 776 832 168</p>
+                                    <p className="text-slate-400 text-xs">+263 715 694 979</p>
                                 </div>
                             </div>
 
