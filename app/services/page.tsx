@@ -208,7 +208,7 @@ export default function Services() {
                             Research Coaching & Thesis Defense.
                         </h2>
                         <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
-                            Led by Dr. Mavundutse. Face-to-face sessions in Zimbabwe or Online for global students.
+                            Led by Dr. Oliver Mavundutse. Face-to-face sessions in Zimbabwe or Online for global students.
                             Specialized for Education majors, but open to all fields.
                         </p>
 
