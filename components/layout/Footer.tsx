@@ -73,7 +73,7 @@ export default function Footer() {
                             <li className="flex items-start gap-3">
                                 <Mail size={18} className="text-orange-500 flex-shrink-0 mt-0.5" />
                                 <span className="text-sm text-slate-400">
-                                    info@ripec.com
+                                    info@rintpathway.com
                                 </span>
                             </li>
                         </ul>

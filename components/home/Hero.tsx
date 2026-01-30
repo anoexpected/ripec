@@ -46,7 +46,7 @@ export default function Hero() {
                         </h1>
 
                         <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-200 mb-6 sm:mb-8 leading-relaxed">
-                            We help students in Zimbabwe access 50–100% tuition-free
+                            We help students in Zimbabwe access 50-100% tuition-free
                             scholarships at top international universities. Start
                             your journey today.
                         </p>

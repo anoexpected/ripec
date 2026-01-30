@@ -117,7 +117,7 @@ function ContactForm() {
                                 </div>
                                 <div>
                                     <h3 className="text-white font-semibold text-sm mb-1">Email Us</h3>
-                                    <p className="text-slate-400 text-xs">info@ripec.com</p>
+                                    <p className="text-slate-400 text-xs">info@rintpathway.com</p>
                                 </div>
                             </div>
 
