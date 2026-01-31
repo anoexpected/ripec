@@ -31,7 +31,7 @@ export const metadata: Metadata = {
         siteName: "RIPEC",
         images: [
             {
-                url: "https://rintpathway.com/images/services.png",
+                url: "https://rintpathway.com/images/services.jpg",
                 width: 1200,
                 height: 630,
                 alt: "RIPEC Global Education Consultancy",
