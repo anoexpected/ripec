@@ -16,19 +16,31 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://ripec.com"),
+    metadataBase: new URL("https://rintpathway.com"),
     title: "RIPEC | Resume International Pathway Education Consultancy",
-    description: "Your trusted gateway to global education. We navigate scholarships, visas, and admissions for Zimbabwe students to India, China, Malaysia, and the UAE.",
+    description:
+        "Your trusted gateway to global education. We navigate scholarships, visas, and admissions for Zimbabwe students to India, China, Malaysia, and the UAE.",
     icons: {
         icon: "/logo.png",
     },
     openGraph: {
         title: "RIPEC - Global Education Consultancy",
-        description: "50-100% Scholarships available. Start your study abroad journey today.",
-        images: ["/images/services.png"],
+        description:
+            "50-100% Scholarships available. Start your study abroad journey today.",
+        url: "https://rintpathway.com",
+        siteName: "RIPEC",
+        images: [
+            {
+                url: "https://rintpathway.com/images/services.png",
+                width: 1200,
+                height: 630,
+                alt: "RIPEC Global Education Consultancy",
+            },
+        ],
         type: "website",
     },
 };
+
 
 export default function RootLayout({
     children,
